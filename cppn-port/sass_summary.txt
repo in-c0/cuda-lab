@@ -1,0 +1,12 @@
+SASS instruction mix -- cuobjdump --dump-sass cppn.exe, sm_75
+NOTE: 'instrs' is a LOWER BOUND for any kernel reported at 4096: the
+disassembly offsets are 4 hex digits and wrap at 65536 bytes = 4096
+instructions. Only the intrinsic variants are short enough to count exactly.
+
+kernel                                    instrs   LDG   LDC  MUFU   FFMA  MUFU kinds
+D  global   + early-out + intrinsics        3376    16     0   100    611  MUFU.COS MUFU.EX2 MUFU.LG2 MUFU.RCP MUFU.RSQ MUFU.SIN
+   global   + early-out                     4096    34     0    51    692  MUFU.EX2 MUFU.RCP MUFU.RSQ
+   constant + no early-out                  4096    13     6    51    684  MUFU.EX2 MUFU.RCP MUFU.RSQ
+C  constant + early-out + intrinsics        3424     0    22   100    611  MUFU.COS MUFU.EX2 MUFU.LG2 MUFU.RCP MUFU.RSQ MUFU.SIN
+B  constant + early-out                     4096    13    18    51    684  MUFU.EX2 MUFU.RCP MUFU.RSQ
+A  global   + no early-out                  4096    34     0    51    694  MUFU.EX2 MUFU.RCP MUFU.RSQ

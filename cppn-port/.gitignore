@@ -1,0 +1,7 @@
+*.exe
+*.lib
+*.exp
+*.obj
+*.pdb
+*.raw
+sass.txt

@@ -1,0 +1,48 @@
+﻿== GlassOS CPPN -- CUDA port ==
+GPU        : NVIDIA GeForce RTX 2080 (sm_75), 46 SMs, 8.0 GB
+clocks     : SM 1800 MHz, mem 7000 MHz, bus 256-bit -> 448.0 GB/s theoretical
+driver API : 13030   runtime API : 12060
+resolution : 1920x1080   iterations : 100 (after 10 warm-up)
+
+-- static resources (cudaFuncGetAttributes) --
+variant      regs   localB   constB     maxTPB
+A naive        73       32     1536        768
+B const        64       32     1536       1024
+C fast         64        0     1536       1024
+
+-- theoretical occupancy (cudaOccupancyMaxActiveBlocksPerMultiprocessor) --
+threads         A naive      B const       C fast
+64            12 blk   75%    16 blk  100%    16 blk  100%
+128            6 blk   75%     8 blk  100%     8 blk  100%
+256            3 blk   75%     4 blk  100%     4 blk  100%
+512            1 blk   50%     2 blk  100%     2 blk  100%
+1024           0 blk    0%     1 blk  100%     1 blk  100%
+
+-- block-size sweep (variant C, 1920x1080, min over 5 interleaved rounds of 100) --
+block              ms     Mpix/s    thr/blk
+8x8             1.054     1967.2         64
+16x4            1.059     1957.9         64
+16x8            1.050     1974.6        128
+32x2            1.065     1947.3         64
+32x4            1.053     1969.3        128
+32x8            0.923     2246.2        256
+64x2            1.061     1954.1        128
+64x4            0.930     2230.5        256
+128x2           0.943     2199.2        256
+256x1           0.964     2150.7        256
+best block : 32x8 (0.923 ms)
+
+-- kernel configurations (1920x1080, block 32x8, min over 5 interleaved rounds of 100) --
+   all six configurations are timed round-robin in one loop, so GPU
+   clock drift over the run cannot masquerade as a difference between them.
+configuration                                         ms     Mpix/s     vs A   wrBW GB/s
+A  global   + no early-out            (naive)      1.647     1259.1    1.00x        5.04
+   constant + no early-out                         1.742     1190.5    0.95x        4.76
+   global   + early-out                            1.028     2017.2    1.60x        8.07
+B  constant + early-out                            1.140     1819.0    1.44x        7.28
+C  constant + early-out + intrinsics               0.922     2248.2    1.79x        8.99
+D  global   + early-out + intrinsics  (best)       0.862     2406.0    1.91x        9.62
+wrote cuda_Bnd.raw / cuda_Cnd.raw (dither disabled)
+
+wrote out_variant_A/B/C.png and cuda_A/B/C.raw (1920x1080 RGBA8)
+wrote scene.json (uniform dump)

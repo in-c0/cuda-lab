@@ -1,0 +1,12 @@
+﻿CPU reference 1920x1080  (all differences in 8-bit LSB per channel)
+
+[1] double precision, dither ON  (full shader)
+  CUDA A (naive)               : max|d|=28  mean|d|=2.2109  %>1LSB=56.3739  %>2LSB=34.2873  SSIM(luma)=0.997857
+  CUDA B (constant)            : max|d|=28  mean|d|=2.2109  %>1LSB=56.3739  %>2LSB=34.2873  SSIM(luma)=0.997857
+  CUDA C (fast-math)           : max|d|=28  mean|d|=2.2109  %>1LSB=56.3740  %>2LSB=34.2874  SSIM(luma)=0.997857
+[2] double precision, dither OFF
+  CUDA B (no dither)           : max|d|=25  mean|d|=1.6854  %>1LSB=40.7339  %>2LSB=24.0763  SSIM(luma)=0.998495
+  CUDA C (no dither)           : max|d|=25  mean|d|=1.6854  %>1LSB=40.7342  %>2LSB=24.0763  SSIM(luma)=0.998495
+[3] float precision, dither OFF  (same arithmetic width as the GPU)
+  CUDA B (no dither)           : max|d|= 1  mean|d|=0.0006  %>1LSB= 0.0000  %>2LSB= 0.0000  SSIM(luma)=1.000000
+  CUDA C (no dither)           : max|d|= 1  mean|d|=0.0006  %>1LSB= 0.0000  %>2LSB= 0.0000  SSIM(luma)=1.000000
