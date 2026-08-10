@@ -1,0 +1,19 @@
+﻿# device: NVIDIA GeForce RTX 2080  sm_75  SMs=46  memClk=7000MHz  busWidth=256-bit
+# peak theoretical bandwidth: 448.0 GB/s
+# cuda runtime 12.6, driver api 13.3
+N=514  fixed turbulent field, RMS|div|=2.5523e-02 max|div|=4.1058e-01
+solver           sweeps RMS|div| after    reduction     max|div|         ms
+Jacobi               10     2.4872e-02         1.0x   3.7276e-01     0.1815
+Jacobi               20     2.4321e-02         1.0x   3.4807e-01     0.3173
+Jacobi               40     2.3405e-02         1.1x   3.1192e-01     0.5977
+Jacobi               80     2.2019e-02         1.2x   2.6779e-01     1.1733
+Jacobi              160     2.0144e-02         1.3x   2.1777e-01     2.2302
+Jacobi              320     1.7875e-02         1.4x   1.6786e-01     4.5502
+Jacobi              640     1.5381e-02         1.7x   1.2354e-01     8.7441
+red-black GS         10     2.4347e-02         1.0x   3.5029e-01     0.2365
+red-black GS         20     2.3425e-02         1.1x   3.1344e-01     0.4368
+red-black GS         40     2.2033e-02         1.2x   2.6867e-01     0.9049
+red-black GS         80     2.0153e-02         1.3x   2.1795e-01     1.6893
+red-black GS        160     1.7880e-02         1.4x   1.6793e-01     3.3495
+red-black GS        320     1.5383e-02         1.7x   1.2363e-01     6.6629
+red-black GS        640     1.2829e-02         2.0x   8.7517e-02    13.2667

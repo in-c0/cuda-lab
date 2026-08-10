@@ -1,0 +1,24 @@
+﻿--- N=512, Jacobi-40 whole-frame, min of 4 trials ---
+N=514 p_iters=40 shared=0
+block          ms/frame
+ 8x8             1.4673
+16x8             1.2749
+16x16            1.2580
+32x4             1.2851
+32x8             1.2678
+32x16            1.2788
+64x4             1.2548
+64x8             1.2623
+128x8             1.2513
+--- N=2048, Jacobi-40 whole-frame, min of 4 trials ---
+N=2050 p_iters=40 shared=0
+block          ms/frame
+ 8x8            12.3344
+16x8            12.7299
+16x16           12.0074
+32x4            12.0228
+32x8            11.8871
+32x16           12.5767
+64x4            12.0848
+64x8            12.0196
+128x8            12.0435

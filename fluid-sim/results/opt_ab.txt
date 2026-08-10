@@ -1,0 +1,16 @@
+﻿# device: NVIDIA GeForce RTX 2080  sm_75  SMs=46  memClk=7000MHz  busWidth=256-bit
+# peak theoretical bandwidth: 448.0 GB/s
+# cuda runtime 12.6, driver api 13.3
+N      variant                          ms/frame    vs base
+512    baseline (global bilerp,           1.3221     1.000x
+512    + texture advect                   1.3599     0.972x
+512    + shared-mem jacobi                1.3663     0.968x
+512    + both                             1.3749     0.962x
+1024   baseline (global bilerp,           3.3992     1.000x
+1024   + texture advect                   3.4830     0.976x
+1024   + shared-mem jacobi                3.5359     0.961x
+1024   + both                             3.5861     0.948x
+2048   baseline (global bilerp,          11.9799     1.000x
+2048   + texture advect                  12.3350     0.971x
+2048   + shared-mem jacobi               12.3111     0.973x
+2048   + both                            12.6508     0.947x

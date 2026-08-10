@@ -1,0 +1,62 @@
+﻿
+ptxas info    : 0 bytes gmem
+ptxas info    : 24 bytes gmem, 8 bytes cmem[4]
+ptxas info    : Compiling entry function '_Z10k_colormapPhPKfS1_S1_i' for 'sm_75'
+ptxas info    : Function properties for _Z10k_colormapPhPKfS1_S1_i
+ptxas info    : Used 14 registers, used 0 barriers, 388 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z11k_sum_fieldPKfiPd' for 'sm_75'
+ptxas info    : Function properties for _Z11k_sum_fieldPKfiPd
+ptxas info    : Used 10 registers, used 1 barriers, 2048 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z18k_sumsq_divergencePKfS0_iPd' for 'sm_75'
+ptxas info    : Function properties for _Z18k_sumsq_divergencePKfS0_iPd
+ptxas info    : Used 16 registers, used 1 barriers, 2048 bytes smem, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z14k_sumsq_field2PKfS0_iPd' for 'sm_75'
+ptxas info    : Function properties for _Z14k_sumsq_field2PKfS0_iPd
+ptxas info    : Used 16 registers, used 1 barriers, 2048 bytes smem, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z19k_set_pure_gradientPfS_if' for 'sm_75'
+ptxas info    : Function properties for _Z19k_set_pure_gradientPfS_if
+ptxas info    : Used 25 registers, used 0 barriers, 32 bytes cumulative stack size, 376 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_Z16k_max_divergencePKfS0_iPj' for 'sm_75'
+ptxas info    : Function properties for _Z16k_max_divergencePKfS0_iPj
+ptxas info    : Used 12 registers, used 0 barriers, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z10k_buoyancyPfPKfif' for 'sm_75'
+ptxas info    : Function properties for _Z10k_buoyancyPfPKfif
+ptxas info    : Used 10 registers, used 0 barriers, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z8k_injectPfS_S_iffffff' for 'sm_75'
+ptxas info    : Function properties for _Z8k_injectPfS_S_iffffff
+ptxas info    : Used 16 registers, used 0 barriers, 404 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z10k_boundaryPfii' for 'sm_75'
+ptxas info    : Function properties for _Z10k_boundaryPfii
+ptxas info    : Used 22 registers, used 0 barriers, 368 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z19k_subtract_gradientPfS_PKfi' for 'sm_75'
+ptxas info    : Function properties for _Z19k_subtract_gradientPfS_PKfi
+ptxas info    : Used 18 registers, used 0 barriers, 380 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z12k_divergencePfS_PKfS1_i' for 'sm_75'
+ptxas info    : Function properties for _Z12k_divergencePfS_PKfS1_i
+ptxas info    : Used 16 registers, used 0 barriers, 388 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z13k_prolong_addPfPKfii' for 'sm_75'
+ptxas info    : Function properties for _Z13k_prolong_addPfPKfii
+ptxas info    : Used 16 registers, used 0 barriers, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z10k_restrictPfPKfii' for 'sm_75'
+ptxas info    : Function properties for _Z10k_restrictPfPKfii
+ptxas info    : Used 14 registers, used 0 barriers, 376 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z10k_residualPfPKfS1_i' for 'sm_75'
+ptxas info    : Function properties for _Z10k_residualPfPKfS1_i
+ptxas info    : Used 18 registers, used 0 barriers, 380 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z13k_gs_redblackPfPKfiffi' for 'sm_75'
+ptxas info    : Function properties for _Z13k_gs_redblackPfPKfiffi
+ptxas info    : Used 15 registers, used 0 barriers, 384 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z15k_jacobi_sharedPfPKfS1_iff' for 'sm_75'
+ptxas info    : Function properties for _Z15k_jacobi_sharedPfPKfS1_iff
+ptxas info    : Used 24 registers, used 1 barriers, 388 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z14k_jacobi_naivePfPKfS1_iff' for 'sm_75'
+ptxas info    : Function properties for _Z14k_jacobi_naivePfPKfS1_iff
+ptxas info    : Used 16 registers, used 0 barriers, 388 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z12k_advect_texPfyPKfS1_if' for 'sm_75'
+ptxas info    : Function properties for _Z12k_advect_texPfyPKfS1_if
+ptxas info    : Used 16 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compiling entry function '_Z15k_advect_manualPfPKfS1_S1_if' for 'sm_75'
+ptxas info    : Function properties for _Z15k_advect_manualPfPKfS1_S1_if
+ptxas info    : Used 20 registers, used 0 barriers, 392 bytes cmem[0]
+
+

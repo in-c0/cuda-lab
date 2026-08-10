@@ -1,0 +1,48 @@
+﻿### N=512  solver=jacobi
+N=514 iters=40 block=32x8 tex=0 shared=0 avg over 50 frames
+whole-frame (single event pair): 1.2724 ms
+stage                    ms/frame        %
+sources+buoyancy           0.0403     3.1%
+diffusion (jacobi)         0.5767    44.4%
+advect velocity            0.0207     1.6%
+projection (jacobi)        0.5943    45.8%
+boundary                   0.0364     2.8%
+advect dye                 0.0295     2.3%
+instrumented total         1.2980
+
+### N=512  solver=mg
+N=514 iters=40 block=32x8 tex=0 shared=0 avg over 50 frames
+whole-frame (single event pair): 4.2787 ms
+stage                    ms/frame        %
+sources+buoyancy           0.0383     0.9%
+diffusion (jacobi)         0.5786    13.4%
+advect velocity            0.0229     0.5%
+projection (jacobi)        3.6031    83.5%
+boundary                   0.0430     1.0%
+advect dye                 0.0293     0.7%
+instrumented total         4.3151
+
+### N=2048  solver=jacobi
+N=2050 iters=40 block=32x8 tex=0 shared=0 avg over 50 frames
+whole-frame (single event pair): 11.9160 ms
+stage                    ms/frame        %
+sources+buoyancy           0.1913     1.6%
+diffusion (jacobi)         5.5265    46.3%
+advect velocity            0.2637     2.2%
+projection (jacobi)        5.7421    48.1%
+boundary                   0.0266     0.2%
+advect dye                 0.1863     1.6%
+instrumented total        11.9364
+
+### N=2048  solver=mg
+N=2050 iters=40 block=32x8 tex=0 shared=0 avg over 50 frames
+whole-frame (single event pair): 16.4590 ms
+stage                    ms/frame        %
+sources+buoyancy           0.1938     1.2%
+diffusion (jacobi)         5.6064    34.9%
+advect velocity            0.2675     1.7%
+projection (jacobi)        9.7625    60.9%
+boundary                   0.0263     0.2%
+advect dye                 0.1869     1.2%
+instrumented total        16.0433
+

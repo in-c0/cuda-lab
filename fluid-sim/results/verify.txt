@@ -1,0 +1,35 @@
+﻿### Jacobi, 40 sweeps
+N=512 interior, frames=300, solver=Jacobi (injection off after 60)
+  40 sweeps/projection
+max |div| before projection (worst, frames 60..299): 8.8935e-01
+max |div| after  projection (worst, frames 60..299): 6.1419e-01
+mean RMS |div| before projection: 1.8826e-02
+mean RMS |div| after  projection: 1.7315e-02
+mean RMS divergence reduction:    1.1x
+dye mass at frame 60: 22038.758057
+dye mass at frame 299: 1748.494645
+dye mass drift: -92.0663%
+
+### red-black Gauss-Seidel, 40 sweeps
+N=512 interior, frames=300, solver=red-black GS (injection off after 60)
+  40 sweeps/projection
+max |div| before projection (worst, frames 60..299): 4.6285e-01
+max |div| after  projection (worst, frames 60..299): 4.1045e-01
+mean RMS |div| before projection: 1.3439e-02
+mean RMS |div| after  projection: 1.2713e-02
+mean RMS divergence reduction:    1.1x
+dye mass at frame 60: 21302.970947
+dye mass at frame 299: 1295.265414
+dye mass drift: -93.9198%
+
+### multigrid, 4 V-cycles, 6 levels
+N=512 interior, frames=300, solver=multigrid V-cycles (injection off after 60)
+  4 V-cycles/projection, 2 RBGS sweeps per level
+max |div| before projection (worst, frames 60..299): 6.5441e-02
+max |div| after  projection (worst, frames 60..299): 1.1246e-03
+mean RMS |div| before projection: 1.8665e-03
+mean RMS |div| after  projection: 4.8610e-05
+mean RMS divergence reduction:    38.4x
+dye mass at frame 60: 22889.796546
+dye mass at frame 299: 19233.397035
+dye mass drift: -15.9739%

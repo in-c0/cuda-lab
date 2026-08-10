@@ -1,0 +1,5 @@
+﻿N        ms/frame      FPS  (multigrid, 4 V-cycles, 6 levels, coarse=10)
+256        3.8870    257.3
+512        4.2007    238.1
+1024       5.8483    171.0
+2048      17.0615     58.6

@@ -1,0 +1,22 @@
+﻿# device: NVIDIA GeForce RTX 2080  sm_75  SMs=46  memClk=7000MHz  busWidth=256-bit
+# peak theoretical bandwidth: 448.0 GB/s
+# cuda runtime 12.6, driver api 13.3
+N      kernel                              min us     mean us      max us       GB/s
+512    advect: manual bilerp                 8.37        8.64        9.00      501.0
+512    advect: tex2D + array copy           19.33       21.20       22.39      271.2
+512    advect: tex2D (copy excluded)         9.95       11.95       14.85      421.3
+512    jacobi: naive global                  7.65        9.41       13.56      411.2
+512    jacobi: shared-mem halo               8.96       10.49       10.99      351.2
+512    gauss-seidel: red-black              14.31       15.22       16.58      219.9
+1024   advect: manual bilerp                48.26       50.79       52.89      347.7
+1024   advect: tex2D + array copy           73.62       77.67       81.99      284.9
+1024   advect: tex2D (copy excluded)        47.51       49.20       50.53      353.1
+1024   jacobi: naive global                 35.81       37.04       40.31      351.4
+1024   jacobi: shared-mem halo              37.23       38.66       39.98      338.0
+1024   gauss-seidel: red-black              68.84       74.55       77.85      182.8
+2048   advect: manual bilerp               170.56      174.82      188.25      393.5
+2048   advect: tex2D + array copy          260.49      263.43      274.58      322.0
+2048   advect: tex2D (copy excluded)       170.45      187.37      199.82      393.7
+2048   jacobi: naive global                129.00      136.06      143.74      390.2
+2048   jacobi: shared-mem halo             140.87      142.85      144.17      357.3
+2048   gauss-seidel: red-black             259.86      260.38      261.17      193.7
